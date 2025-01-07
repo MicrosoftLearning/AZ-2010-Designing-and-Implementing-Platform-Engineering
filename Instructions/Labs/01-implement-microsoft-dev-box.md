@@ -1,7 +1,7 @@
 ---
 lab:
   title: "Implement Microsoft Dev Box"
-  module: "Implement developer self-service"
+  module: "Implement Developer Self-Service"
 ---
 
 # Lab 01: Implement Microsoft Dev Box
