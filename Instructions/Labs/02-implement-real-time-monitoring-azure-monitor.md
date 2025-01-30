@@ -12,15 +12,15 @@ lab:
 
 ## Objectives
 
-- Deploy a sample web application in Azure.
+- Create a sample web app.
 - Enable and configure Azure Monitor and Application Insights.
 - Create custom dashboards to visualize application metrics.
 - Set up alerts to notify stakeholders of performance anomalies.
 - Analyze performance data for potential improvements.
 
-## Exercise 1: Deploy a sample web application
+## Exercise 1: Create a sample web application
 
-As a platform engineer, you need to ensure the applications running on your platform are observable and continuously monitored. In this lab, you will deploy a sample web application to Azure, configure Azure Monitor and Application Insights, set up custom dashboards, and create alerts to track application performance.
+As a platform engineer, you need to ensure the applications running on your platform are observable and continuously monitored. In this lab, you will create a sample web application to Azure, configure Azure Monitor and Application Insights, set up custom dashboards, and create alerts to track application performance.
 
 ### Task 1: Create an Azure Web App
 
