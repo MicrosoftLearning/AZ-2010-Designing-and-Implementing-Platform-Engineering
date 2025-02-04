@@ -45,7 +45,7 @@ In a platform engineering environment, developers need a way to provision infras
 
    You should see output like Bicep CLI version X.Y.Z.
 
-> **NOTE:** Ensure you have the [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) installed.
+   > **NOTE:** Ensure you have the [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli) installed.
 
 ### Task 2: Create a Bicep Template
 
@@ -118,11 +118,11 @@ In a platform engineering environment, developers need a way to provision infras
    }
    ```
 
-> **NOTE:** You can install the Bicep extension in Visual Studio Code to get syntax highlighting and IntelliSense for Bicep files.
+   > **NOTE:** You can install the Bicep extension in Visual Studio Code to get syntax highlighting and IntelliSense for Bicep files.
+
+   > **IMPORTANT:** Ensure storageAccountName, webAppName, and sqlServerName are globally unique. If deployment fails due to name conflicts, modify the names accordingly.
 
 1. Save and close the file.
-
-> **IMPORTANT:** Ensure storageAccountName, webAppName, and sqlServerName are globally unique. If deployment fails due to name conflicts, modify the names accordingly.
 
 ### Task 3: Deploy the template with Azure CLI
 
@@ -327,6 +327,6 @@ In a platform engineering environment, ensuring that applications can scale effi
 
 1. Verify that the autoscaling policy was applied to the App Service Plan. Go to the Azure portal, navigate to the App Service Plan, select the Scale out (App Service Plan) blade, and verify that the autoscale rule is configured.
 
-> **NOTE:** If you want to test the autoscaling behavior, you can simulate high CPU usage on the App Service by running a load test or generating traffic. The App Service should automatically scale out based on the defined rule.
+   > **NOTE:** If you want to test the autoscaling behavior, you can simulate high CPU usage on the App Service by running a load test or generating traffic. The App Service should automatically scale out based on the defined rule.
 
 You have successfully implemented automated scaling for an Azure App Service using Bicep. This will ensure that your applications can handle increased traffic and demand efficiently, improving performance and reducing costs.
