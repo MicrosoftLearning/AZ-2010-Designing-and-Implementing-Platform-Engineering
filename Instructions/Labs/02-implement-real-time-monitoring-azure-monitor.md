@@ -92,7 +92,7 @@ As a platform engineer, you need to ensure the applications running on your plat
 1. Enter a Name `WebAppResponseTimeAlert` and select a Severity level Verbose.
 1. Click Review + create and then Create.
 
-> **Note:** Your alert rule is now created and will trigger an email notification when the response time exceeds the threshold. You can force the alert to trigger by sending a large number of requests to the web app. For example, you can use Azure Load testing or a tool like Apache JMeter.
+   > **Note:** Your alert rule is now created and will trigger an email notification when the response time exceeds the threshold. You can force the alert to trigger by sending a large number of requests to the web app. For example, you can use Azure Load testing or a tool like Apache JMeter.
 
 1. Go back to the Azure Monitor > Alerts.
 1. Click on Alert rules and you should see the alert rule you created.
