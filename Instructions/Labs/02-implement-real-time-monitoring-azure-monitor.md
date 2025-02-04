@@ -10,6 +10,10 @@ lab:
 
 ## Prerequisites
 
+- Azure subscription - If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/).
+- Basic knowledge of monitoring and observability concepts.
+- Basic understanding of Azure services.
+
 ## Objectives
 
 - Create a sample web app.

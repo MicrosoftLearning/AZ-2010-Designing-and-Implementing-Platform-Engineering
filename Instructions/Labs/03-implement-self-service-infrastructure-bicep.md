@@ -10,6 +10,12 @@ lab:
 
 ## Prerequisites
 
+- Azure subscription - If you don't have an Azure subscription, create a [free account](https://azure.microsoft.com/free/).
+- Basic knowledge of Azure services and Azure CLI.
+- Visual Studio Code installed with the Bicep extension.
+- Azure CLI installed and configured on your local machine.
+- Familiarity with Infrastructure as Code (IaC) concepts.
+
 ## Objectives
 
 - Set up Bicep in your environment.
