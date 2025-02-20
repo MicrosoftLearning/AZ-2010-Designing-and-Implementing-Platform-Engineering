@@ -212,7 +212,7 @@ Microsoft dev box relies on Azure role-based access control (Azure RBAC) to cont
 1. On the **devcenter-01 \| Access control (IAM)** page, select **+ Add** and, in the drop-down list, select **Add role assignment**.
 1. On the **Role** tab of the **Add role assignment** page, select the **Privileged administrator role** tab, in the list of roles, select **Owner** and finally select **Next**.
 1. On the **Members** tab of the **Add role assignment** page, ensure that the **User, group, or service principal** option is selected and click **+ Select members**.
-1. In the **Select members** pane, search for and select **DevCenter_Platform_Engineers** and then click **Select**.
+1. In the **Select members** pane, search for and select **`DevCenter_Platform_Engineers`** and then click **Select**.
 1. Back on the **Members** tab of the **Add role assignment** page, select **Next**.
 1. On the **Conditions** tab of the **Add role assignment** page, in the **What user can do** section, select the option **Allow user to assign all roles (highly privileged)** and then select **Next**.
 1. On the **Review + assign** tab of the **Add role assignment** page, select **Review + assign**.
@@ -224,7 +224,7 @@ Microsoft dev box relies on Azure role-based access control (Azure RBAC) to cont
 1. On the **devcenter-project-01 \| Access control (IAM)** page, select **+ Add** and, in the drop-down list, select **Add role assignment**.
 1. On the **Role** tab of the **Add role assignment** page, ensure that the **Job function roles** tab is selected, in the list of roles, select **DevCenter Project Admin** and select **Next**.
 1. On the **Members** tab of the **Add role assignment** page, ensure that the **User, group, or service principal** option is selected and click **+ Select members**.
-1. In the **Select members** pane, search for and select **DevCenter_Dev_Leads** and then click **Select**.
+1. In the **Select members** pane, search for and select **`DevCenter_Dev_Leads`** and then click **Select**.
 1. Back on the **Members** tab of the **Add role assignment** page, select **Next**.
 1. On the **Review + assign** tab of the **Add role assignment** page, select **Review + assign**.
 
@@ -233,7 +233,7 @@ Microsoft dev box relies on Azure role-based access control (Azure RBAC) to cont
 1. Back on the **devcenter-project-01 \| Access control (IAM)** page, select **+ Add** and, in the drop-down list, select **Add role assignment**.
 1. On the **Role** tab of the **Add role assignment** page, ensure that the **Job function roles** tab is selected, in the list of roles, select **DevCenter Dev Box Users** and select **Next**.
 1. On the **Members** tab of the **Add role assignment** page, ensure that the **User, group, or service principal** option is selected and click **+ Select members**.
-1. In the **Select members** pane, search for and select **DevCenter_Dev_Users** and then click **Select**.
+1. In the **Select members** pane, search for and select **`DevCenter_Dev_Users`** and then click **Select**.
 1. Back on the **Members** tab of the **Add role assignment** page, select **Next**.
 1. On the **Review + assign** tab of the **Add role assignment** page, select **Review + assign**.
 
@@ -281,10 +281,9 @@ The exercise consists of the following tasks:
 
 In this task, you will create an Azure compute gallery and attach it to the dev center you created in the previous exercise of this lab. A gallery is a repository residing in an Azure subscription, which helps you build structure and organization around custom images. After you attach a compute gallery to a dev center and populate it with images, you will be able to create dev box definitions based on images stored in the compute gallery.
 
-1. If needed, connect to the console session of the lab computer and sign in by using the local Administrator account.
-1. Start a web browser and navigate to the Azure portal at `https:\\portal.azure.com`.
-1. When prompted to authenticate, sign in by using the Microsoft Entra user account provided in the lab environment.
-1. In the Azure portal, in the **Search** text box, search for and select **Azure compute galleries**.
+1. Start a web browser and navigate to the Azure portal at `https://portal.azure.com`.
+1. When prompted to authenticate, sign in by using your Microsoft account.
+1. In the Azure portal, in the **Search** text box, search for and select **`Azure compute galleries`**.
 1. On the **Azure compute galleries** page, select **+ Create**.
 1. On the **Basics** tab of the **Create Azure compute gallery** page, specify the following settings and then select **Next: Sharing method**:
 
@@ -300,10 +299,13 @@ In this task, you will create an Azure compute gallery and attach it to the dev 
 
    > **Note:** Wait for the project to be provisioned. The Azure compute gallery creation should take less than 1 minute.
 
-1. In the Azure portal, search for and select **Dev centers** and, on the **Dev centers** page, select **devcenter-01**.
+1. In the Azure portal, search for and select **`Dev centers`** and, on the **Dev centers** page, select **devcenter-01**.
 1. On the **devcenter-01** page, in the vertical navigation menu on the left side, expand the **Dev box configuration** section and select **Azure compute galleries**.
 1. On the **devcenter-01 \| Azure compute galleries** page, select **+ Add**.
 1. In the **Add Azure compute gallery** pane, in the **Gallery** drop-down list, select **compute_gallery_01** and then select **Add**.
+
+   > **Note:** If you receive an error message: "_This dev center does not have a system assigned or user assigned identity. Galleries cannot be added until an identity has been assigned._" you will need to assign a system assigned identity to the dev center.
+   > To do so, in the Azure portal, on the **devcenter-01** page, in the vertical navigation menu on the left side, select **Identity** under Settings, in the **System assigned** tab, set the **Status** switch to **On**, and then select **Save**.
 
 ### Task 2: Configure authentication and authorization
 
@@ -411,6 +413,8 @@ In this task, you will use Azure Image Builder to create a custom image based on
    ```
 
 1. In the PowerShell session of Cloud Shell, use the nano text editor to add the following content to the newly created file:
+
+   > **Note:** To open the nano text editor, run the command `nano ./template.json`. To save changes and exit the nano text editor, press **Ctrl+X**, then **Y**, and finally **Enter**.
 
    ```json
    {
@@ -529,13 +533,13 @@ In this task, you will use Azure Image Builder to create a custom image based on
 
 1. Alternatively, to monitor the build progress, use the following procedure:
 
-   1. In the Azure portal, search for and select **Image templates**.
+   1. In the Azure portal, search for and select **`Image templates`**.
    1. On the **Image templates** page, select **templateWinVSCode01**.
    1. On the **templateWinVSCode01** page, in the **Essentials** section, note the value of the **Build run state** entry.
 
    > **Note:** The build process might take about 30 minutes. Do not wait for its completion but instead proceed to the next task of this exercise.
 
-1. Once the build completes, in the Azure portal, search for and select **Azure compute galleries**.
+1. Once the build completes, in the Azure portal, search for and select **`Azure compute galleries`**.
 1. On the **Azure compute galleries** page, select **compute_gallery_01**.
 1. On the **compute_gallery_01** page, ensure that the **Definitions** tab is selected and, in the list of definitions, select **imageDefDevBoxVSCode**.
 1. On the **imageDefDevBoxVSCode** page, select the **Versions** tab and verify that the **1.0.0 (latest version)** entry appears on the list with the **Provisioning State** set to **Succeeded**.
@@ -546,7 +550,7 @@ In this task, you will use Azure Image Builder to create a custom image based on
 
 In this task, you will configure Azure dev center networking to be used in a scenario that requires private connectivity to resources hosted within an Azure virtual network. Unlike Microsoft hosted network that you leveraged in the first exercise of this lab, virtual network connections also support hybrid scenarios (providing connectivity to on-premises resources) and Microsoft Entra hybrid join of Azure dev boxes (in addition to support for Microsoft Entra join).
 
-1. In the web browser displaying the Azure portal, in the **Search** text box, search for and select **Virtual networks**.
+1. In the web browser displaying the Azure portal, in the **Search** text box, search for and select **`Virtual networks`**.
 1. On the **Virtual networks** page, select **+ Create**.
 1. On the **Basics** tab of the **Create virtual network** page, specify the following settings and then select **Next**:
 
@@ -563,7 +567,7 @@ In this task, you will configure Azure dev center networking to be used in a sce
 
    > **Note:** Wait for the virtual network to be created. This should take less than 1 minute.
 
-1. In the Azure portal, in the **Search** text box, search for and select **Network connections**.
+1. In the Azure portal, in the **Search** text box, search for and select **`Network connections`**.
 1. On the **Network connections** page, select **+ Create**.
 1. On the **Basics** tab of the **Create a network connection** page, specify the following settings and then select **Review + Create**:
 
@@ -579,7 +583,7 @@ In this task, you will configure Azure dev center networking to be used in a sce
 
    > **Note:** Wait for the network connection to be created. This might take about 1 minute.
 
-1. In the Azure portal, search for and select **Dev centers** and, on the **Dev centers** page, select **devcenter-01**.
+1. In the Azure portal, search for and select **`Dev centers`** and, on the **Dev centers** page, select **devcenter-01**.
 1. On the **devcenter-01** page, in the vertical navigation menu on the left side, expand the **Dev box configuration** section and select **Networking**.
 1. On the **devcenter-01 \| Networking** page, select **+ Add**.
 1. In the **Add network connection** pane, in in the **Network connection** drop-down list, select **network-connection-vnet-01** and then select **Add**.
@@ -592,19 +596,19 @@ In this task, you will add image definitions to an Azure dev center project you 
 
 To configure imaging for Microsoft Dev Box team customizations, project-level catalogs must be enabled (which you already completed in the first exercise of this lab). In this task, you will configure catalog sync settings for the project. This will involve attaching a catalog that contains image definition files.
 
-1. In the web browser displaying the Azure portal, in the **Search** text box, search for and select **Dev centers**.
+1. In the web browser displaying the Azure portal, in the **Search** text box, search for and select **`Dev centers`**.
 1. On the **Dev centers** page, select **devcenter-01**.
 1. On the **devcenter-01** page, in the vertical navigation menu on the left side, expand the **Manage** section and select **Projects**.
 1. On the **devcenter-01 \| Projects** page, in the list of projects, select **devcenter-project-01**.
 1. On the **devcenter-project-01** page, in the vertical navigation menu on the left side, expand the **Settings** section and select **Catalogs**.
 1. On the **devcenter-project-01 \| Catalogs** page, select **+ Add**.
-1. In the **Add catalog** pane, in the **Name** text box, enter **image-definitions-01**, in the **Catalog source** section, select **GitHub**, in the **Authentication type**, select **GitHub app**, leave the checkbox **Automatically sync this catalog** checkbox enabled, and then select **Sign in with GitHub**.
-1. If prompted, in the **Sign in with GitHub** window, enter the GitHub credentials provided in the lab environment and select **Sign in**.
+1. In the **Add catalog** pane, in the **Name** text box, enter **`image-definitions-01`**, in the **Catalog source** section, select **GitHub**, in the **Authentication type**, select **GitHub app**, leave the checkbox **Automatically sync this catalog** checkbox enabled, and then select **Sign in with GitHub**.
+1. If prompted, in the **Sign in with GitHub** window, enter your GitHub credentials and select **Sign in**.
 
-   > **Note:** These GitHub credentials provide you with access to a GitHub repo created as a fork of https://github.com/dhruvchand/contoso-co-eShop
+   > **Note:** You need to fork the https://github.com/dhruvchand/contoso-co-eShop repository to your GitHub account before you can complete this step.
 
 1. If prompted, in the **Authorize Microsoft DevCenter** window, select **Authorize Microsoft DevCenter**.
-1. Back in the **Add catalog** pane, in the **Repo** drop-down list, select **contoso-co-eShop**, in the **Branch** drop-down list, accept the **Default branch** entry, in the **Folder path**, enter **.devcenter/catalog/image-definitions** and then select **Add**.
+1. Back in the **Add catalog** pane, in the **Repo** drop-down list, select **contoso-co-eShop**, in the **Branch** drop-down list, accept the **Default branch** entry, in the **Folder path**, enter **`.devcenter/catalog/image-definitions`** and then select **Add**.
 1. Back on the **devcenter-project-01 \| Catalogs** page, verify that the sync completes successfully by monitoring the entry in the **Status** column.
 1. Select the **Sync successful** link in the **Status** column, review the resulting notification pane, verify 3 items were added to the catalog, and close the pane by selecting the **x** symbol in the upper right corner.
 1. Back on the **devcenter-project-01 \| Catalogs** page, select **image-definitions-01** and verify that it contains three entries named **ContosoBaseImageDefinition**, **backend-eng**, and **frontend-eng**.
@@ -664,7 +668,7 @@ In this task, you will evaluate the functionality of a customized dev box by usi
 1. Start a web browser incognito/in-private and navigate to the Microsoft Dev Box developer portal at `https://aka.ms/devbox-portal`.
 1. When prompted to sign in, provide the credentials of the **devuser01** user account.
 1. On the **Welcome, devuser01** page of the Microsoft Dev Box developer portal, select **+ New dev box**.
-1. In the **Add a dev box** pane, in the **Name** text box, enter **devuser01box02**.
+1. In the **Add a dev box** pane, in the **Name** text box, enter **`devuser01box02`**.
 1. In the **Dev box pool** drop-down list, select **devcenter-project-01-devbox-pool-02**.
 1. Review other information presented in the **Add a dev box** pane, including the project name, dev box pool specifications, hibernation support status, and the scheduled shutdown timing. In addition, note the option to apply customizations and the notification that dev box creation might take up to 65 minutes.
 1. In the **Add a dev box** pane, select **Create**.
