@@ -33,8 +33,8 @@ As a platform engineer, you need to ensure the applications running on your plat
 1. Click + Create and select Web App.
 1. In the Basics tab:
    - Subscription: Select your Azure subscription.
-   - Resource Group: Click Create new, enter monitoringlab-rg, and click OK.
-   - Name: Enter a unique name, such as monitoringlab-webapp.
+   - Resource Group: Click Create new, enter **`monitoringlab-rg`**, and click OK.
+   - Name: Enter a unique name, such as **`monitoringlab-webapp`**.
    - Publish: Select Code.
    - Runtime stack: Choose .NET 8 (LTS).
    - Region: Select a region close to you.

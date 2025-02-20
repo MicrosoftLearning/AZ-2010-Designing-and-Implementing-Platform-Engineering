@@ -99,10 +99,10 @@ In this task, you will review the basic configuration setting of the dev center 
    1. In the **Add catalog** pane, in the **Name** text box, enter **`quickstart-environment-definitions-fix`**, in the **Catalog location** section, select **GitHub**, in the **Authentication type**, select **GitHub app**, leave the checkbox **Automatically sync this catalog** checkbox enabled, and then select **Sign in with GitHub**.
    1. In the **Sign in with GitHub** window, enter the GitHub credentials and select **Sign in**.
 
-      > **Note:** These GitHub credentials provide you with access to a GitHub repo created as a fork of https://github.com/microsoft/devcenter-catalog
+      > **Note:** These GitHub credentials provide you with access to a GitHub repo created as a fork of <https://github.com/microsoft/devcenter-catalog>
 
    1. When prompted, in the **Authorize Microsoft DevCenter** window, select **Authorize Microsoft DevCenter**.
-   1. Back in the **Add catalog** pane, in the **Repo** drop-down list, select **devcenter-catalog**, in the **Branch** drop-down list, accept the **Default branch** entry, in the **Folder path**, enter **Environment-Definitions** and then select **Add**.
+   1. Back in the **Add catalog** pane, in the **Repo** drop-down list, select **devcenter-catalog**, in the **Branch** drop-down list, accept the **Default branch** entry, in the **Folder path**, enter **`Environment-Definitions`** and then select **Add**.
    1. Back on the **devcenter-01 \| Catalogs** page, verify that the sync completes successfully by monitoring the entry in the **Status** column.
 
 1. On the **devcenter-01 \| Catalogs** page, select the **quickstart-environment-definitions-fix** entry.
@@ -244,7 +244,7 @@ In this task, you will evaluate a dev box functionality by using a Microsoft Ent
 1. Start a web browser incognito/in-private and navigate to the Microsoft Dev Box developer portal at `https://aka.ms/devbox-portal`.
 1. When prompted to sign in, provide the credentials of the **devuser01** user account.
 1. On the **Welcome, devuser01** page of the Microsoft Dev Box developer portal, select **+ New dev box**.
-1. In the **Add a dev box** pane, in the **Name** text box, enter **devuser01box01**
+1. In the **Add a dev box** pane, in the **Name** text box, enter **`devuser01box01`**
 1. Review other information presented in the **Add a dev box** pane, including the project name, dev box pool specifications, hibernation support status, and the scheduled shutdown timing. In addition, note the option to apply customizations and the notification that dev box creation might take up to 65 minutes.
 
    > **Note:** Dev box names must be unique within a project.
