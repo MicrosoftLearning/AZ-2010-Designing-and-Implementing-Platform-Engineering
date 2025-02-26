@@ -22,7 +22,7 @@ lab:
 - A Microsoft Intune subscription associated with the same Microsoft Entra tenant as the Azure subscription
 - A Microsoft Intune license assigned to the three pre-created Microsoft Entra user accounts
 - A GitHub repo created as a fork of https://github.com/microsoft/devcenter-catalog
-- A GitHub repo created as a fork of https://github.com/dhruvchand/contoso-co-eShop
+- A GitHub repo created as a fork of https://github.com/MicrosoftLearning/contoso-co-eShop
 
 ## Objectives
 
@@ -605,7 +605,7 @@ To configure imaging for Microsoft Dev Box team customizations, project-level ca
 1. In the **Add catalog** pane, in the **Name** text box, enter **`image-definitions-01`**, in the **Catalog source** section, select **GitHub**, in the **Authentication type**, select **GitHub app**, leave the checkbox **Automatically sync this catalog** checkbox enabled, and then select **Sign in with GitHub**.
 1. If prompted, in the **Sign in with GitHub** window, enter your GitHub credentials and select **Sign in**.
 
-   > **Note:** You need to fork the https://github.com/dhruvchand/contoso-co-eShop repository to your GitHub account before you can complete this step.
+   > **Note:** You need to fork the https://github.com/MicrosoftLearning/contoso-co-eShop repository to your GitHub account before you can complete this step.
 
 1. If prompted, in the **Authorize Microsoft DevCenter** window, select **Authorize Microsoft DevCenter**.
 1. Back in the **Add catalog** pane, in the **Repo** drop-down list, select **contoso-co-eShop**, in the **Branch** drop-down list, accept the **Default branch** entry, in the **Folder path**, enter **`.devcenter/catalog/image-definitions`** and then select **Add**.
