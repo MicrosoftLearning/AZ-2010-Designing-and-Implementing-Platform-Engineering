@@ -21,6 +21,9 @@ lab:
 - An Azure subscription to host Microsoft Dev Box resources associated with the Microsoft Entra tenant hosting the user and group accounts
 - A Microsoft Intune subscription associated with the same Microsoft Entra tenant as the Azure subscription
 - A Microsoft Intune license assigned to the three pre-created Microsoft Entra user accounts
+- You will need a GitHub account and repository.
+  - To create a GitHub account, follow instructions in the article [Creating an account on GitHub](https://docs.github.com/get-started/quickstart/creating-an-account-on-github).
+  - To create a GitHub repository, follow instructions in the article [Creating a new repository](https://docs.github.com/repositories/creating-and-managing-repositories/creating-a-new-repository).
 - A GitHub repo created as a fork of https://github.com/microsoft/devcenter-catalog
 - A GitHub repo created as a fork of https://github.com/MicrosoftLearning/contoso-co-eShop
 
