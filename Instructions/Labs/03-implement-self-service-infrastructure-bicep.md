@@ -64,8 +64,7 @@ In a platform engineering environment, developers need a way to provision infras
 1. Copy and paste the following Bicep code into the file:
 
    ```bicep
-   param location string = 'eastus'
-   param resourceGroupName string = 'BicepLab-RG'
+   param location string = 'eastus2'
    param appServicePlanName string = 'bicepAppPlan'
    param webAppName string = 'bicep-webapp'
    param storageAccountName string = 'biceplabstorage'
@@ -127,6 +126,8 @@ In a platform engineering environment, developers need a way to provision infras
    > **NOTE:** You can install the Bicep extension in Visual Studio Code to get syntax highlighting and IntelliSense for Bicep files.
 
    > **IMPORTANT:** Ensure storageAccountName, webAppName, and sqlServerName are globally unique. If deployment fails due to name conflicts, modify the names accordingly.
+
+   > **NOTE:** If you encounter an error related to the region, try deploying to a different region by changing the `location` parameter value.
 
 1. Save and close the file.
 
@@ -279,7 +280,7 @@ In a platform engineering environment, ensuring that applications can scale effi
 1. Immediately after this resource, add the autoscaleSetting configuration:
 
    ```bicep
-   resource autoscaleSetting 'Microsoft.Insights/autoscaleSettings@2021-05-01' = {
+   resource autoscaleSetting 'Microsoft.Insights/autoscaleSettings@2024-01-01-preview' = {
    name: 'autoscale-rule'
    location: location
    properties: {
