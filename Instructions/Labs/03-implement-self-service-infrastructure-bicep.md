@@ -31,6 +31,14 @@ In a platform engineering environment, developers need a way to provision infras
 ### Task 1: Install Bicep CLI
 
 1. Open your local terminal.
+1. Log in to your Azure account:
+
+   ```bash
+   az login
+   ```
+
+   > **NOTE:** Follow the prompts to authenticate with your Azure account. This will open a web browser for authentication.
+
 1. To verify if Bicep is installed, run:
 
    ```bash
@@ -280,7 +288,7 @@ In a platform engineering environment, ensuring that applications can scale effi
 1. Immediately after this resource, add the autoscaleSetting configuration:
 
    ```bicep
-   resource autoscaleSetting 'Microsoft.Insights/autoscaleSettings@2024-01-01-preview' = {
+   resource autoscaleSetting 'Microsoft.Insights/autoscaleSettings@2022-10-01' = {
    name: 'autoscale-rule'
    location: location
    properties: {
