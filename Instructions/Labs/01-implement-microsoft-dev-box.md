@@ -455,7 +455,7 @@ In this task, you will use Azure Image Builder to create a custom image based on
          "properties": {
            "buildTimeoutInMinutes": 100,
            "vmProfile": {
-             "vmSize": "Standard_DS2_v2",
+             "vmSize": "Standard_D2s_v3",
              "osDiskSizeGB": 127
            },
            "source": {
