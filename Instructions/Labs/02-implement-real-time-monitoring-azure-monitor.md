@@ -73,7 +73,9 @@ As a platform engineer, you need to ensure the applications running on your plat
    - Select **New** to create a new dashboard
    - Enter a dashboard name: **`MonitoringLab Dashboard`**
    - Select the appropriate subscription
-   - Choose **Public** for dashboard type
+   - Choose the dashboard type:
+     - **Public**: The dashboard will be visible to all users in the organization. This is suitable for scenarios where shared visibility is required.
+     - **Private**: The dashboard will only be visible to you. This is recommended for lab exercises or scenarios where data visibility should be restricted.
    - Click **Create and pin**
 1. After the dashboard is created and the metrics are pinned, click **Save** in the top menu to save the dashboard.
 1. Navigate to the dashboard by clicking the **Dashboard** icon in the left panel of the Azure portal, or search for "Dashboard" in the top search bar.
