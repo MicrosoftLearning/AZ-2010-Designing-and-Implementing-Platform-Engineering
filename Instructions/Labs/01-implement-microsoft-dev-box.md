@@ -613,7 +613,7 @@ To configure imaging for Microsoft Dev Box team customizations, project-level ca
    1. On the GitHub **Install Microsoft DevCenter** page, you will be prompted to install the app on your personal account.
    1. In the **Install on your personal account** section, choose one of the following options:
       - Select **All repositories** to grant access to all current and future repositories in your account.
-      - Select **Only select repositories** to choose specific repositories. If you choose this option, use the **Select repositories** dropdown to select the **contoso-co-eShop** repository (or any other repositories you want to make available to Azure DevCenter).
+      - Select **Only select repositories** to choose specific repositories. Before proceeding, ensure you have forked the **contoso-co-eShop** repository to your GitHub account. If you choose this option, use the **Select repositories** dropdown to select the **contoso-co-eShop** repository (or any other repositories you want to make available to Azure DevCenter).
    1. Review the permissions that will be granted under **with these permissions** section, which typically includes "Read access to code and metadata".
    1. Select **Install** to complete the GitHub App installation.
    1. You will be redirected back to the Azure portal. If the redirect doesn't happen automatically, close the GitHub tab and return to the Azure portal.
