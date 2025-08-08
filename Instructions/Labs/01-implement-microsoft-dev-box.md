@@ -607,7 +607,7 @@ To configure imaging for Microsoft Dev Box team customizations, project-level ca
 1. On the **devcenter-project-01 \| Catalogs** page, select **+ Add**.
 1. In the **Add catalog** pane, in the **Name** text box, enter **`image-definitions-01`**, in the **Catalog source** section, select **GitHub**, in the **Authentication type**, select **GitHub app**, leave the checkbox **Automatically sync this catalog** checkbox enabled, and then select **Sign in with GitHub**.
 1. If prompted, in the **Sign in with GitHub** window, enter your GitHub credentials and select **Sign in**.
-1. If you see a message stating "We could not find any GitHub repos associated with the account" with a link to **configure your repositories**, complete the following additional steps to set up the Microsoft DevCenter GitHub App:
+1. If you see a message stating "We could not find any GitHub repos associated with the account" with a link to **configure your repositories**, this typically occurs during the first-time setup or if the GitHub App hasn't been previously configured. Complete the following additional steps to set up the Microsoft DevCenter GitHub App:
 
    1. Select the **configure your repositories** link. This will open a new browser tab or window directed to GitHub.
    1. On the GitHub **Install Microsoft DevCenter** page, you will be prompted to install the app on your personal account.
