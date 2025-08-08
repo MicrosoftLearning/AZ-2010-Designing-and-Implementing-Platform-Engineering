@@ -49,6 +49,8 @@ As a platform engineer, you need to ensure the applications running on your plat
 1. Application Insights is already enabled for this web app. Click the link to open the Application Insights resource.
 1. In the Application Insights resource, click in the Application Dashboard to view the performance data the default dashboard provided.
 
+   > **Note:** The dashboard may take a few moments to fully load and display all performance data. Wait for the dashboard to completely render before proceeding to ensure optimal experience in subsequent exercises.
+
 ## Exercise 2: Configure Azure Monitor and dashboards
 
 ### Task 1: Access Azure Monitor
@@ -66,10 +68,18 @@ As a platform engineer, you need to ensure the applications running on your plat
 1. Repeat the process for additional metrics:
    - CPU Time (Count)
    - Requests (Average)
-1. Click to dashboard and pin to dashboard.
-1. Select type Shared and select the subscription and the monitoringlab-webapp Dashboard.
-1. Click Pin to dashboard.
-1. Click the dashboard icon in the left panel to view the dashboard.
+1. In the metrics chart area, click the **Pin to dashboard** button (pin icon) in the top-right corner of the chart.
+1. In the **Pin to dashboard** dialog that appears:
+   - Select **New** to create a new dashboard
+   - Enter a dashboard name: **`MonitoringLab Dashboard`**
+   - Select the appropriate subscription
+   - Choose the dashboard type:
+     - **Public**: The dashboard will be visible to all users in the organization. This is suitable for scenarios where shared visibility is required.
+     - **Private**: The dashboard will only be visible to you. This is recommended for lab exercises or scenarios where data visibility should be restricted.
+   - Click **Create and pin**
+1. After the dashboard is created and the metrics are pinned, click **Save** in the top menu to save the dashboard.
+1. Navigate to the dashboard by clicking the **Dashboard** icon in the left panel of the Azure portal, or search for "Dashboard" in the top search bar.
+1. Select your newly created **MonitoringLab Dashboard** from the dashboard list.
 1. Verify the metrics are displayed on the dashboard and are updating in real-time.
 
 ## Exercise 3: Create alerts
