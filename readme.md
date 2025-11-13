@@ -1,3 +1,7 @@
+> ⚠️ **Notice**  
+> This repository will be **archived on November 14, 2025**.  
+> The new repository for DevOps labs can be found here: [MicrosoftLearning/mslearn-devops](https://github.com/MicrosoftLearning/mslearn-devops)
+
 # Microsoft Lab Exercises
 <!-- Change the title above as appropriate -->
 
