@@ -1,4 +1,4 @@
-**This course will be archiving on  **2025-11-14**.**
+**This course will be archived on 2025-11-14.**
 
 # Microsoft Lab Exercises
 <!-- Change the title above as appropriate -->
